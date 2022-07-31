@@ -1,0 +1,30 @@
+#include <stdio.h> 
+#include <stdlib.h>
+ #include <time.h> 
+void insertion_sort(int a[], int n) { 
+for(int i=1;i<n;i++) { 
+int v=a[i];int j=i-1;while(j>=0 && a[j]>v) 
+{ 
+a[j+1]=a[j]; 
+J- -;
+ } 
+a[j+1]=v; 
+} 
+} 
+int main() 
+{ 
+int n;clock_t start,end;double t;printf("Enter the value of n: "); 
+scanf("%d",&n);int a[n];printf("Enter the array elements:\n"); 
+for(int i=0;i<n;i++) 
+scanf(“%d",&a[i]);
+ start=clock(); 
+insertion_sort(a,n); 
+end=clock(); 
+printf("\nThe sorted array is:\n"); 
+for(int i=0;i<n;i++) 
+printf("%d\t",a[i]); 
+printf("\n"); 
+t=(double)(end-start)/CLOCKS_PER_SEC; 
+printf("Time taken = %f seconds\n",t); 
+return 0; 
+} 
